@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="font-src 'self' data:; img-src 'self' data:; default-src 'self' http://121.0.0:3000/">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="Login/Login_Page.css">
+    <title>Login</title>
+    <script>
+(function (m, a, z, e) {
+  var s, t;
+  try {
+    t = m.sessionStorage.getItem('maze-us');
+  } catch (err) {}
+
+  if (!t) {
+    t = new Date().getTime();
+    try {
+      m.sessionStorage.setItem('maze-us', t);
+    } catch (err) {}
+  }
+
+  s = a.createElement('script');
+  s.src = z + '?t=' + t + '&apiKey=' + e;
+  s.async = true;
+  a.getElementsByTagName('head')[0].appendChild(s);
+  m.mazeUniversalSnippetApiKey = e;
+})(window, document, 'https://snippet.maze.co/maze-universal-loader.js', 'c36fae48-10c1-436e-b477-907209665f67');
+</script>
+</head>
+<body>
+
+    <div class="login-form-container">
+        <div class="sub-container">
+            <form action="">
+                <h3>buy wheels login</h3>
+                <input type="email" id="emailid" placeholder="Email" required class="box">
+                <input type="password" id="password" placeholder="Password" required class="box">
+                <p> forget your password <a href="#">click here</a> </p>
+                <button id="grad-btn" class="btn">Login</button>
+                <p>or login with</p>
+                <div class="buttons">
+                    <a href="#" class="btn"><i class="fab fa-google"></i> google</a>
+                    <a href="#" class="btn"><i class="fab fa-facebook-f"></i> facebook</a>
+                </div>
+                <p> don't have an account  </p>
+                <div id="signin-btn">
+                    <button class="btn"><a href="Signin_Page.html">Create One</a></button>
+                    <i class="far fa-user"></i>
+                </div>
+                <p id="result">Logging in....</p>
+            </form>
+        </div>    
+    </div>
+
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+    <script type="module" src="Login/Login_Page.js"></script>
+</body>
+</html>
